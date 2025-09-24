@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="MakakalikasanIcon/Logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS Variables for Colors */
+        /* Colors */
         :root {
             --primary-blue: #1a73e8;
             --primary-pink: #e91e63;
@@ -348,7 +348,7 @@
             right: 25px;
         }
 
-        /* Fullscreen Modal for Images */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -450,7 +450,6 @@
             75% { transform: translateY(-20px) rotate(-5deg); }
         }
 
-        /* Special Effects for Adviser Section */
         .adviser-rocket {
             position: absolute;
             font-size: 40px;
@@ -652,7 +651,6 @@
             font-size: 1.1rem;
         }
 
-        /* Special Effects for Teachers */
         .rocket {
             position: absolute;
             font-size: 40px;
@@ -899,7 +897,6 @@
             color: #666;
         }
 
-        /* Footer */
         footer {
             background: linear-gradient(to bottom, #89f7fe, #2c3e50);
             color: var(--white);
@@ -1109,7 +1106,7 @@
             background: linear-gradient(45deg, #ff5e00, #ff9a00);
         }
 
-        /* Custom Alert */
+        /* Alert */
         .custom-alert {
             display: none;
             position: fixed;
@@ -1162,7 +1159,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Name Image Modal */
+        /* Image Modal */
         .name-image-modal {
             display: none;
             position: fixed;
@@ -1200,7 +1197,7 @@
             75% { border-color: #ffff00; box-shadow: 0 0 30px #ffff00; }
         }
 
-        /* Easter Egg Messages */
+        /* Easter Egg Message */
         .easter-egg-message {
             display: none;
             position: fixed;
@@ -1220,7 +1217,6 @@
             animation: fadeIn 0.5s ease;
         }
 
-        /* Scroll to Top Button */
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
@@ -1252,7 +1248,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1000px;
@@ -1419,7 +1415,6 @@
             }
         }
 
-        /* Print Styles */
         @media print {
             nav, .welcome-modal, .scroll-to-top {
                 display: none !important;
@@ -1488,7 +1483,6 @@
         <div id="heartRain"></div>
     </section>
 
-    <!-- Journey -->
     <section id="journey">
         <div class="container">
             <h2>Our Journey</h2>
@@ -1670,12 +1664,10 @@
         </div>
     </section>
 
-    <!-- Classmates -->
     <section id="classmates">
         <div class="container">
             <h2>Our Class</h2>
             
-            <!-- Adviser -->
             <div class="adviser-section">
                 <div class="adviser-container">
                     <img class="adviser-img" src="Classmate-Picture/Adviser/flor.jpg" alt="Adviser">
@@ -1687,7 +1679,6 @@
                 <h3>Our Adviser: Joseph Agustin Flor</h3>
                 <p>Thank you for teaching and caring for us through senior high.</p>
                 
-                <!-- Special Effects -->
                 <div class="adviser-rocket" style="top: 10%; left: 5%; animation-delay: 0s;">🚀</div>
                 <div class="adviser-rocket" style="top: 30%; left: 15%; animation-delay: 2s;">🚀</div>
                 <div class="adviser-rocket" style="top: 70%; left: 8%; animation-delay: 4s;">🚀</div>
@@ -1698,7 +1689,6 @@
                 <div class="adviser-planet" style="top: 80%; left: 75%; animation-delay: 6s;">🪐</div>
             </div>
             
-            <!-- Boys -->
             <h3 style="color: var(--primary-blue);">Boys</h3>
             <div class="classmate-grid" id="boysGrid">
                 <div class="classmate-container boy">
@@ -1796,7 +1786,6 @@
                 </div>
             </div>
             
-            <!-- Girls -->
             <h3 style="color: var(--primary-pink); margin-top: 70px;">Girls</h3>
             <div class="classmate-grid" id="girlsGrid">
                 <div class="classmate-container girl">
@@ -1953,7 +1942,6 @@
         </div>
     </section>
 
-    <!-- Teachers -->
     <section id="teachers">
         <div class="container">
             <h2>Our Teachers</h2>
@@ -2038,7 +2026,6 @@
         </div>
     </section>
 
-    <!-- Gallery -->
     <section id="gallery">
         <div class="container">
             <h2>Memories Gallery</h2>
@@ -2518,7 +2505,6 @@
         </div>
     </section>
     
-    <!-- Message -->
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
@@ -2587,7 +2573,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -2624,7 +2609,7 @@
     </div>
 
     <script>
-        // Data for the website
+
         const classmates = {
             boys: [
                 "BELICARIO", "CUNTAPAY", "DE GUZMAN", "GAGATAM", "LAREDA", 
@@ -2703,7 +2688,7 @@
             "Even far, I feel the color of your eyes in my dreams"
         ];
 
-        // Welcome messages based on user type
+        // Welcome messages
         const studentMessages = [
             "Welcome, [name]! We're so happy you made it",
             "Great to see you again, [name]! Enjoy exploring the site",
@@ -2758,25 +2743,21 @@
         // Current user info
         let currentUser = {
             name: '',
-            type: 'visitor', // student, adviser, teacher, visitor
-            gender: '' // boy, girl
+            type: 'visitor', 
+            gender: '' 
         };
 
-        // Initialize the website
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            // Calculate days since graduation
+
             calculateDaysSinceGraduation();
             
-            // Create heart rain
             createHeartRain();
             
-            // Initialize slideshow
             initSlideshow();
             
-            // Set up event listeners
             setupEventListeners();
             
-            // Show welcome modal after a brief delay
             setTimeout(() => {
                 welcomeModal.style.display = 'flex';
             }, 500);
@@ -2791,7 +2772,6 @@
             daysCounter.textContent = diffDays;
         }
 
-        // Create heart rain effect
         function createHeartRain() {
             const heartRain = document.getElementById('heartRain');
             const numHearts = 60;
@@ -2809,33 +2789,27 @@
             }
         }
 
-        // Initialize slideshow
         function initSlideshow() {
             let currentSlide = 0;
             const totalSlides = document.querySelectorAll('.slide').length;
             
-            // Set initial position
             slides.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Next button event
             nextBtn.addEventListener('click', function() {
                 currentSlide = (currentSlide + 1) % totalSlides;
                 slides.style.transform = `translateX(-${currentSlide * 100}%)`;
             });
             
-            // Previous button event
             prevBtn.addEventListener('click', function() {
                 currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
                 slides.style.transform = `translateX(-${currentSlide * 100}%)`;
             });
             
-            // Auto advance slides every 5 seconds
             setInterval(function() {
                 currentSlide = (currentSlide + 1) % totalSlides;
                 slides.style.transform = `translateX(-${currentSlide * 100}%)`;
             }, 3000);
             
-            // Add click event to slides for fullscreen view
             document.querySelectorAll('.gallery-item').forEach(item => {
                 item.addEventListener('click', function() {
                     const imgSrc = this.querySelector('img').src;
@@ -2845,9 +2819,7 @@
             });
         }
 
-        // Set up event listeners
         function setupEventListeners() {
-            // Welcome modal enter button
             enterBtn.addEventListener('click', processNameEntry);
             lastNameInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
@@ -2855,37 +2827,31 @@
                 }
             });
             
-            // Close alert button
             closeAlert.addEventListener('click', function() {
                 customAlert.style.display = 'none';
                 welcomeModal.style.display = 'none';
             });
             
-            // Close image modal
             closeModal.addEventListener('click', function() {
                 imageModal.style.display = 'none';
             });
             
-            // Close image modal when clicking outside
             imageModal.addEventListener('click', function(e) {
                 if (e.target === imageModal) {
                     imageModal.style.display = 'none';
                 }
             });
             
-            // Easter egg for logo double click
             mainLogo.addEventListener('dblclick', function() {
                 showEasterEggMessage('logo');
             });
             
-            // Form submission
             messageForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert('Message sent!');
                 this.reset();
             });
             
-            // Scroll to top button
             scrollToTop.addEventListener('click', function() {
                 window.scrollTo({
                     top: 0,
@@ -2893,7 +2859,6 @@
                 });
             });
             
-            // Show scroll to top button when scrolling
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 300) {
                     scrollToTop.classList.add('active');
@@ -2902,7 +2867,6 @@
                 }
             });
             
-            // Add double click events for classmate images
             document.querySelectorAll('.classmate-img').forEach(img => {
                 img.addEventListener('dblclick', function(e) {
                     e.stopPropagation();
@@ -2911,7 +2875,6 @@
                 });
             });
             
-            // Add click events for gallery items
             document.querySelectorAll('.gallery-item').forEach(item => {
                 item.addEventListener('click', function() {
                     const imgSrc = this.querySelector('img').src;
@@ -2921,14 +2884,12 @@
             });
         }
 
-        // Process name entry from welcome modal
         function processNameEntry() {
             const name = lastNameInput.value.trim().toUpperCase();
             
             if (name) {
                 currentUser.name = name;
                 
-                // Determine user type
                 if (name === 'FLOR') {
                     currentUser.type = 'adviser';
                 } else if (teachers.some(teacher => teacher.name.toUpperCase() === name)) {
@@ -2943,7 +2904,6 @@
                     currentUser.type = 'visitor';
                 }
                 
-                // Show name image modal if it's a student
                 if (currentUser.type === 'student') {
                     showNameImageModal(name);
                 } else {
@@ -2954,9 +2914,7 @@
             }
         }
 
-        // Show name image modal
         function showNameImageModal(name) {
-            // Map of names to their actual image paths
             const imageMap = {
                 'BELICARIO': 'Classmate-Picture/Bilecario.jpg',
                 'CUNTAPAY': 'Classmate-Picture/Cuntapay.jpg',
@@ -3000,20 +2958,18 @@
                 'ZARAGA': 'Classmate-Picture/Zaraga.jpg'
             };
 
-            // Get the actual image path for the student
+            // Get the actual image for the student
             const imagePath = imageMap[name];
 
             if (imagePath) {
                 nameImage.src = imagePath;
             } else {
-                // Fallback to placeholder if image not found
                 const color = currentUser.gender === 'boy' ? '1a73e8' : 'e91e63';
                 nameImage.src = `https://placehold.co/400x500/${color}/white?text=${name}&font=montserrat`;
             }
 
             nameImageModal.style.display = 'flex';
 
-            // After 3 seconds, hide the image modal and show welcome alert
             setTimeout(function() {
                 nameImageModal.style.display = 'none';
                 showWelcomeAlert();
@@ -3025,11 +2981,9 @@
             let message = '';
             let messagesArray = [];
             
-            // Select appropriate message array based on user type
             switch (currentUser.type) {
                 case 'student':
                     messagesArray = studentMessages;
-                    // Change navigation color based on gender
                     if (currentUser.gender === 'boy') {
                         navTitle.style.background = 'linear-gradient(45deg, var(--primary-blue), var(--primary-blue))';
                         navTitle.style.webkitBackgroundClip = 'text';
@@ -3052,16 +3006,13 @@
                     messagesArray = visitorMessages;
             }
             
-            // Select random message
             message = messagesArray[Math.floor(Math.random() * messagesArray.length)];
             message = message.replace('[name]', currentUser.name);
             
-            // Display alert
             alertMessage.textContent = message;
             customAlert.style.display = 'block';
         }
 
-        // Show easter egg message
         function showEasterEggMessage(target) {
             let message = '';
             
@@ -3078,7 +3029,6 @@
             easterEggMessage.textContent = message;
             easterEggMessage.style.display = 'block';
             
-            // Hide after 3 seconds
             setTimeout(function() {
                 easterEggMessage.style.display = 'none';
             }, 3000);
@@ -3087,3 +3037,4 @@
 </body>
 
 </html>
+
