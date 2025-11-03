@@ -1442,6 +1442,11 @@
         </div>
     </div>
 
+    <audio id="enterSound" preload="auto">
+        <source src="Music/Nature`s Class.mp3" type="audio/mpeg">
+        <source src="Music/Nature`s Class.mp3" type="audio/wav">
+    </audio>
+
     <div class="custom-alert" id="customAlert">
         <div class="alert-message" id="alertMessage"></div>
         <button class="close-alert" id="closeAlert">OK</button>
@@ -2885,6 +2890,7 @@
         }
 
         function processNameEntry() {
+            playEnterSound();
             const name = lastNameInput.value.trim().toUpperCase();
             
             if (name) {
@@ -3033,8 +3039,17 @@
                 easterEggMessage.style.display = 'none';
             }, 3000);
         }
+
+        function playEnterSound() {
+            const enterSound = document.getElementById('enterSound');
+            if (enterSound) {
+                enterSound.currentTime = 0;
+                enterSound.play().catch(e => console.log('Audio play failed:', e));
+            }
+        }
     </script>
 </body>
 
 </html>
+
 
